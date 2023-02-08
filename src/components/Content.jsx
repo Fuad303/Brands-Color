@@ -16,10 +16,10 @@ function Content() {
         <Download/>
       </header>
       <section className="brands">
-      {brands.map((brand) => {
+      {brands.map((brand, id) => {
         return (
         <LazyLoad key={brand.slug} once={true} placeholder="Yüklənir...">
-          <Brand brand={brand}/>
+          <Brand key={id} brand={brand}/>
         </LazyLoad>
         )
       })}
